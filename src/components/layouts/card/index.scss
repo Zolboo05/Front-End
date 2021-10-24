@@ -1,0 +1,134 @@
+.cardContent {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.col-width {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 12px;
+  float: left;
+}
+.card {
+  width: calc(var(--card-size) * 1.586);
+  height: var(--card-size);
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #01a6fd 0%, #17d0cf 100%);
+  display: flex;
+  grid-template-columns: 40% auto;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px 2px rgba(0, 0, 0, 0.56),
+      0 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.card-details {
+  padding: 0 1rem;
+}
+.teacher {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+.teacherBorder {
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #f55a04;
+  border: 1px dashed #f55a04;
+  width: 100px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.occupation {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.card-avatar {
+  display: grid;
+  place-items: center;
+}
+.dd {
+  border-top: 1px dashed #e2e9ed;
+}
+.dd ul {
+  margin-top: 10px;
+}
+.dd li {
+  font-size: 0.8rem;
+}
+.card-avatar img {
+  border-radius: 100px;
+  padding: 10px;
+  height: 150px;
+}
+
+.card-about {
+  margin-top: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+
+  .value {
+    font-size: 1rem;
+  }
+
+  .label {
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+
+  .label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .value {
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .col-width {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 12px;
+    float: left;
+  }
+}
